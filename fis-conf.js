@@ -57,7 +57,7 @@ fis.match('/widget/**.vue:js', {
 });
 fis.match('/widget/**.vue:less', {
     rExt: 'css',
-    parser: [fis.plugin('iknow-less')],
+    parser: [fis.plugin('less')],
     postprocessor: fis.plugin('autoprefixer')
 });
 
