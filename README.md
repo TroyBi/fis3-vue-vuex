@@ -9,7 +9,7 @@ fis3 是百度开发的面向前端的工程构建工具。对于前端工程，
 
 参考：http://fis.baidu.com/
 
-#fis3-vue-vuex主要解决的问题
+# fis3-vue-vuex主要解决的问题
 1. .vue文件的编译问题
 
 采用fis3-parser-vue-component插件来处理。
@@ -55,6 +55,7 @@ fis.match('/widget/**.vue:less', {
 
 使用api.js中统一维护异步接口。并且对post参数做了统一处理。
 
+
 # 目录
 
 ```javascript
@@ -72,13 +73,41 @@ fis.match('/widget/**.vue:less', {
 ├── widget
 │   ├── api
 │   │   └── api.es6.js
-│   ├── 
-│   ├── 
-│   ├── 
-│   └── 
+│   ├── app
+│   │   ├── app.es6.js
+│   │   ├── app.less
+│   │   └── app.tpl
+│   ├── components
+│   │   ├── app.vue
+│   │   ├── editConf.vue
+│   │   └── previewConf.vue
+│   ├── css
+│   │   └── base.less
+│   ├── lib
+│   │   ├── axios
+│   │   │   └── axios.js
+│   │   ├── jquery
+│   │   │   └── jquery.js
+│   │   └── vue
+│   │       ├── vue.js
+│   │       └── vuex.js
+│   └── store
+│       ├── mutation-type.es6.js
+│       └── store.es6.js
 ├── .gitignore
-├── .eslintrc
-├── gulpfile.js
-├── package.json
-└── webpack.config.js
+├── fis-conf.js
+└── server.conf
 ```
+
+# 运行
+
+安装fis3以及各种插件
+
+```javascript
+git clone https://github.com/TroyBi/fis3-vue-vuex.git
+
+cd fis3-vue-vuex
+
+fis3 release 
+```
+访问 http://127.0.0.1:8080/page/index
